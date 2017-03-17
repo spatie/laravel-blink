@@ -170,7 +170,7 @@ function foo()
 ### all
 ```php
 /*
- * Get all values in the blink cache.
+* Get all values in the blink cache.
 */
 public function all() : array
 ```
