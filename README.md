@@ -147,7 +147,9 @@ function foo()
     static $result = null;
     
     if (is_null($result) {
-        $result = barThatDoesExpensiveThings();
+        $result = function() {
+            return ... // do some expensive stuff here
+        };
     }
     
     return $result;
@@ -159,9 +161,14 @@ can be rewritten to
 ```php
 function foo()
 {
-    return blink()->once('fooCache', barThatDoesExpensiveThings());
+    return blink()->once('someFunctionCache', function() {
+       return ... // do some expensive stuff here
+    });
 }
 ```
+
+
+
 
 ### all
 ```php
