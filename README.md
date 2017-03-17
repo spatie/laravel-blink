@@ -75,9 +75,167 @@ composer require spatie/laravel-blink
 
 ## Usage
 
-``` php
-$LaravelBlink = new Spatie\LaravelBlink();
-echo $LaravelBlink->echoPhrase('Hello, Spatie!');
+A `Blink` instance can just be newed up.
+
+```php
+$blink = new \Spatie\Blink\Blink()
+```
+
+You can call the following methods on it:
+
+### put
+```php
+/**
+ * Put a value in the blink cache.
+ *
+ * @param string|array $name
+ * @param string|int|null $value
+ * 
+ * @return $this
+ */
+public function put($name, $value = null)
+```
+
+### get
+
+```php
+/**
+ * Get a value from the blink cache.
+ *
+ * This function has support for the '*' wildcard.
+ *
+ * @param string $name
+ *
+ * @return null|string
+ */
+public function get(string $name)
+```
+
+### has
+
+```php
+/*
+ * Determine if the blink cache has a value for the given name.
+ *
+ * This function has support for the '*' wildcard.
+ */
+public function has(string $name) : bool
+```
+
+### once
+
+```php
+/**
+ * Only if the given key is not present in the blink cache the callable will be executed.
+ * 
+ * The result of the callable will be stored in the given key and returned.
+ * 
+ * @param $key
+ * @param callable $callable
+ *
+ * @return mixed
+ */
+```
+
+You can use this to avoid using static variables to cache stuff.
+
+This piece of code
+
+```php
+function foo()
+{
+    static $result = null;
+    
+    if (is_null($result) {
+        $result = barThatDoesExpensiveThings();
+    }
+    
+    return $result;
+}
+```
+
+can be rewritten to
+
+```php
+function foo()
+{
+    return blink()->('someFunctionCache', barThatDoesExpensiveThings());
+}
+```
+
+
+
+
+### all
+```php
+/*
+ * Get all values in the blink cache.
+*/
+public function all() : array
+```
+
+### forget
+```php
+/**
+ * Forget a value from the blink cache.
+ *
+ * This function has support for the '*' wildcard.
+ *
+ * @param string $key
+ *
+ * @return $this
+ */
+public function forget(string $key)
+```
+
+### flush
+```php
+/**
+ * Flush all values from the blink cache.
+ *
+ * @return $this
+ */
+ public function flush()
+```
+
+### pull
+```php
+/**
+ * Get and forget a value from the blink cache.
+ *
+ * This function has support for the '*' wildcard.
+ *
+ * @param string $name 
+ *
+ * @return null|string
+ */
+public function pull(string $name)
+```
+
+### increment
+```php
+/**
+ * Increment a value from the blink cache.
+ *
+ * @param string $name
+ * @param int $by
+ *
+ * @return int|null|string
+ */
+ public function increment(string $name, int $by = 1)
+```
+
+### decrement
+```php
+/**
+ * Decrement a value from the blink cache.
+ *
+ * @param string $name
+ * @param int $by
+ *
+ * @return int|null|string
+ */
+ public function decrement(string $name, int $by = 1)
 ```
 
 ## Changelog
