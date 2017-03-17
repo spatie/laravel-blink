@@ -159,12 +159,9 @@ can be rewritten to
 ```php
 function foo()
 {
-    return blink()->('someFunctionCache', barThatDoesExpensiveThings());
+    return blink()->('fooCache', barThatDoesExpensiveThings());
 }
 ```
-
-
-
 
 ### all
 ```php
