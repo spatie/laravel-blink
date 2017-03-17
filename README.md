@@ -159,7 +159,7 @@ can be rewritten to
 ```php
 function foo()
 {
-    return blink()->('fooCache', barThatDoesExpensiveThings());
+    return blink()->once('fooCache', barThatDoesExpensiveThings());
 }
 ```
 
