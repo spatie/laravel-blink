@@ -18,5 +18,5 @@ function blink()
         return app('blink')->put($arguments[0], $arguments[1]);
     }
 
-    throw new InvalidArgumentException("Too many arguments given");
+    throw new InvalidArgumentException("blink() expects 0, 1 or 2 arguments");
 }
