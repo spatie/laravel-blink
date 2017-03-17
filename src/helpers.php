@@ -1,7 +1,5 @@
 <?php
 
-use Spatie\LaravelBlink\Blink;
-
 function blink()
 {
     $arguments = func_get_args();
