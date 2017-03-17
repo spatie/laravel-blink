@@ -6,18 +6,16 @@ function blink()
 {
     $arguments = func_get_args();
 
-    $blink = app('blink');
-
     if (empty($arguments)) {
-        return $blink;
+        return app('blink');
     }
 
     if (count($arguments) === 1) {
-        return $blink->get($arguments[0]);
+        return app('blink')->get($arguments[0]);
     }
 
     if (count($arguments) === 2) {
-        return $blink->put($arguments[0], $arguments[1]);
+        return app('blink')->put($arguments[0], $arguments[1]);
     }
 
     throw new InvalidArgumentException("Too many arguments given");
