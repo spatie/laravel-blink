@@ -2,6 +2,7 @@
 
 namespace Spatie\LaravelBlink\Test;
 
+use InvalidArgumentException;
 use Spatie\Blink\Blink;
 
 class BlinkHelperTest extends TestCase
@@ -26,5 +27,13 @@ class BlinkHelperTest extends TestCase
         blink('key', 'myValue');
 
         $this->assertEquals('myValue', blink()->get('key'));
+    }
+
+    /** @test */
+    public function it_will_throw_an_exception_if_too_many_arguments_are_given()
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        blink('one', 'two', 'tree');
     }
 }
