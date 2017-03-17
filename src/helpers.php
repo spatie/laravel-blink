@@ -20,7 +20,7 @@ function blink()
         return $blink->put($arguments[0], $arguments[1]);
     }
 
-    if (count($arguments)> 2) {
+    if (count($arguments) > 2) {
         throw new InvalidArgumentException("Too many arguments given");
     }
 
