@@ -1,34 +1,37 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "spatie/laravel-blink",
+    "description": "Cache that expires in the blink of an eye",
     "keywords": [
         "spatie",
-        ":package_name"
+        "laravel-blink"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/spatie/laravel-blink",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Freek Van der Herten",
+            "email": "freek@spatie.be",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "spatie/blink": "dev-master",
+        "illuminate/support": "^5.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.0"
+        "phpunit/phpunit": "^6.0",
+        "orchestra/testbench": "^3.4"
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Spatie\\LaravelBlink\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Test\\": "tests"
+            "Spatie\\LaravelBlink\\Test\\": "tests"
         }
     },
     "scripts": {

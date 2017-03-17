@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Skeleton;
+namespace Spatie\LaravelBlink;
 
 use Illuminate\Support\ServiceProvider;
 
-class SkeletonServiceProvider extends ServiceProvider
+class BlinkServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -13,14 +13,14 @@ class SkeletonServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/skeleton.php' => config_path('skeleton.php'),
+                __DIR__.'/../config/LaravelBlink.php' => config_path('LaravelBlink.php'),
             ], 'config');
 
             /*
-            $this->loadViewsFrom(__DIR__.'/../resources/views', 'skeleton');
+            $this->loadViewsFrom(__DIR__.'/../resources/views', 'LaravelBlink');
 
             $this->publishes([
-                __DIR__.'/../resources/views' => base_path('resources/views/vendor/skeleton'),
+                __DIR__.'/../resources/views' => base_path('resources/views/vendor/LaravelBlink'),
             ], 'views');
             */
         }
@@ -31,6 +31,6 @@ class SkeletonServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'skeleton');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'LaravelBlink');
     }
 }

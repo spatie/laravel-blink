@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Test;
+namespace Spatie\LaravelBlink\Test;
 
 use PHPUnit\Framework\TestCase;
 

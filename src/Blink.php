@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Skeleton;
+namespace Spatie\LaravelBlink;
 
-class SkeletonClass
+class Blink
 {
     /**
-     * Create a new Skeleton Instance.
+     * Create a new LaravelBlink Instance.
      */
     public function __construct()
     {
