@@ -161,7 +161,7 @@ can be rewritten to
 ```php
 function foo()
 {
-    return blink()->once('someFunctionCache', function() {
+    return blink()->once('fooCache', function() {
        return ... // do some expensive stuff here
     });
 }
