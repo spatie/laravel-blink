@@ -147,9 +147,7 @@ function foo()
     static $result = null;
     
     if (is_null($result) {
-        $result = function() {
-            return ... // do some expensive stuff here
-        };
+        $result = ...// do some expensive stuff here
     }
     
     return $result;
