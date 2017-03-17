@@ -1,11 +1,61 @@
-# Very short description of the package
+# Cache that expires in the blink of an eye
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-blink.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-blink)
 [![Build Status](https://img.shields.io/travis/spatie/laravel-blink/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-blink)
 [![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-blink.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-blink)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-blink.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-blink)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This package contains a helper function (and a Facade should you prefer that) called `blink` that can cache values. The cache only spans the length of a single request.
+
+```php
+blink()->put('key', 'value');
+
+blink()->get('key'); // Returns 'value'
+blink()->get('prefix*'); // Returns an array of values whose keys start with 'prefix'
+
+// once will only execute the given callable if the given key didn't exist yet
+// once will only execute the given callable if the given key didn't exist yet
+$expensiveFunction = function() {
+   return rand();
+});
+blink()->once('random', $expensiveFunction); // returns random number
+blink()->once('random' $expensiveFunction); // returns the same number
+
+blink()->has('key'); // Returns true
+blink()->has('prefix*'); // Returns true if the blink contains contains a key that starts with 'prefix'
+
+// Specify a default value for when the specified key does not exist
+blink()->get('non existing key', 'default') // Returns 'default'
+
+blink()->put('anotherKey', 'anotherValue');
+
+// Put multiple items in one go
+blink()->put(['ringo' => 'drums', 'paul' => 'bass']);
+
+blink()->all(); // Returns an array with all items
+
+blink()->forget('key'); // Removes the item
+blink()->forget('prefix*'); // Forget all items of which the key starts with 'prefix'
+
+blink()->flush(); // Empty the entire blink
+
+blink()->flushStartingWith('somekey'); // Remove all items whose keys start with "somekey"
+
+blink()->increment('number'); // blink()->get('key') will return 1 
+blink()->increment('number'); // blink()->get('key') will return 2
+blink()->increment('number', 3); // blink()->get('key') will return 5
+
+// Blink implements ArrayAccess
+blink()['key'] = 'value';
+blink()['key']; // Returns 'value'
+isset(blink()['key']); // Return true
+unset(blink()['key']); // Equivalent to removing the value
+
+// Blink implements Countable
+count(blink()); // Returns 0
+blink()->put('key', 'value');
+count(blink()); // Returns 1
+```
 
 ## Postcardware
 

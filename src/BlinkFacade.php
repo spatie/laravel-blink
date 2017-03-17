@@ -16,6 +16,6 @@ class BlinkFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'LaravelBlink';
+        return 'blink';
     }
 }
