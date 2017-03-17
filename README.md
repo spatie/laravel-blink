@@ -167,9 +167,6 @@ function foo()
 }
 ```
 
-
-
-
 ### all
 ```php
 /*
