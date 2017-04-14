@@ -80,12 +80,12 @@ To enable the package, register the serviceprovider, and optionally register the
 
 'providers' => [
     // ...
-    Spatie\Blink\BlinkServiceProvider::class,
+    Spatie\LaravelBlink\BlinkServiceProvider::class,
 ],
 
 'aliases' => [
     ...
-    'Blink' => Spatie\Blink\Blink\BlinkFacade::class,
+    'Blink' => Spatie\LaravelBlink\Blink\BlinkFacade::class,
 ],
 ```
 
