@@ -69,9 +69,27 @@ We publish all received postcards [on our company website](https://spatie.be/en/
 
 You can install the package via composer:
 
-``` bash
+```bash
 composer require spatie/laravel-blink
 ```
+
+To enable the package, register the serviceprovider, and optionally register the facade:
+
+```php
+// config/app.php
+
+'providers' => [
+    // ...
+    Spatie\Blink\BlinkServiceProvider::class,
+],
+
+'aliases' => [
+    ...
+    'Blink' => Spatie\Blink\Blink\BlinkFacade::class,
+],
+```
+
+
 
 ## Usage
 
