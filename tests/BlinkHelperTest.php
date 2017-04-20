@@ -22,11 +22,23 @@ class BlinkHelperTest extends TestCase
     }
 
     /** @test */
-    public function when_passing_a_two_arguments_they_will_be_used_to_put_something_in_the_blink_cache()
+    public function when_passing_two_arguments_they_will_be_used_to_put_something_in_the_blink_cache()
     {
-        blink('key', 'myValue');
+        blink('key', function () {
+            return 'myValue';
+        });
 
         $this->assertEquals('myValue', blink()->get('key'));
+    }
+
+    /** @test */
+    public function when_passing_two_arguments_the_result_of_the_callable_will_be_returned()
+    {
+        $result = blink('key', function () {
+            return 'myValue';
+        });
+
+        $this->assertEquals('myValue', $result);
     }
 
     /** @test */
