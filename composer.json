@@ -42,5 +42,15 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spatie\\LaravelBlink\\BlinkServiceProvider"
+            ],
+            "aliases": {
+                "Blink": "Spatie\\LaravelBlink\\Blink\\BlinkFacade"
+            }
+        }
     }
 }
