@@ -85,7 +85,7 @@ To enable the package, register the serviceprovider, and optionally register the
 
 'aliases' => [
     ...
-    'Blink' => Spatie\LaravelBlink\Blink\BlinkFacade::class,
+    'Blink' => Spatie\LaravelBlink\BlinkFacade::class,
 ],
 ```
 
