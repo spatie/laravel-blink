@@ -2,6 +2,9 @@
 
 All notable changes to `laravel-blink` will be documented in this file
 
+## 1.1.2 - 2018-09-04
+- Removed: Added support for Laravel 5.7
+
 ## 1.1.1 - 2018-02-08
 - Removed: Dropped support for Laravel 5.4
 
