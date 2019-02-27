@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-blink` will be documented in this file
 
+## 1.2.0 - 2019-02-27
+- Drop support for Laravel 5.7 and below
+- Drop support for PHP 7.1 and below
+
 ## 1.1.3 - 2019-02-27
 - Added support for Laravel 5.8
 
