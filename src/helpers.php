@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @return \Spatie\Blink\Blink|mixed
+ */
 function blink()
 {
     $arguments = func_get_args();
