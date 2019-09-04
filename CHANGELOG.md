@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-blink` will be documented in this file
 
+## 1.3.0 - 2019-09-04
+
+- add support for Laravel 6
+
 ## 1.2.1 - 2019-05-21
 - Add docblock to helper function
 
