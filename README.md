@@ -22,7 +22,7 @@ blink()->once('random', $expensiveFunction); // returns random number
 blink()->once('random', $expensiveFunction); // returns the same number
 
 blink()->has('key'); // Returns true
-blink()->has('prefix*'); // Returns true if the blink contains contains a key that starts with 'prefix'
+blink()->has('prefix*'); // Returns true if the blink contains a key that starts with 'prefix'
 
 // Specify a default value for when the specified key does not exist
 blink()->get('non existing key', 'default') // Returns 'default'
@@ -41,14 +41,14 @@ blink()->flush(); // Empty the entire blink
 
 blink()->flushStartingWith('somekey'); // Remove all items whose keys start with "somekey"
 
-blink()->increment('number'); // blink()->get('key') will return 1 
-blink()->increment('number'); // blink()->get('key') will return 2
-blink()->increment('number', 3); // blink()->get('key') will return 5
+blink()->increment('number'); // blink()->get('number') will return 1 
+blink()->increment('number'); // blink()->get('number') will return 2
+blink()->increment('number', 3); // blink()->get('number') will return 5
 
 // Blink implements ArrayAccess
 blink()['key'] = 'value';
 blink()['key']; // Returns 'value'
-isset(blink()['key']); // Return true
+isset(blink()['key']); // Returns true
 unset(blink()['key']); // Equivalent to removing the value
 
 // Blink implements Countable
@@ -183,6 +183,18 @@ function foo()
 public function all() : array
 ```
 
+### allStartingWith
+```php
+/**
+ * Get all values from the blink cache which keys start with the given string.
+ *
+ * @param string $startingWith
+ *
+ * @return array
+*/
+public function allStartingWith(string $startingWith = '') : array
+```
+
 ### forget
 ```php
 /**
@@ -205,6 +217,18 @@ public function forget(string $key)
  * @return $this
  */
  public function flush()
+```
+
+### flushStartingWith
+```php
+/**
+ * Flush all values from the blink cache which keys start with the specified value.
+ *
+ * @param string $startingWith
+ *
+ * @return $this
+ */
+ public function flushStartingWith(string $startingWith)
 ```
 
 ### pull
@@ -249,7 +273,7 @@ public function pull(string $name)
 
 ## Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ## Testing
 
