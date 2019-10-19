@@ -49,7 +49,7 @@
                 "Spatie\\LaravelBlink\\BlinkServiceProvider"
             ],
             "aliases": {
-                "Blink": "Spatie\\LaravelBlink\\Blink\\BlinkFacade"
+                "Blink": "Spatie\\LaravelBlink\\BlinkFacade"
             }
         }
     }
