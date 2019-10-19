@@ -65,7 +65,7 @@ You can install the package via composer:
 composer require spatie/laravel-blink
 ```
 
-To enable the package, register the serviceprovider, and optionally register the facade:
+To enable the package, register the service provider, and optionally register the facade:
 
 ```php
 // config/app.php
