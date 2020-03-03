@@ -2,8 +2,8 @@
 
 namespace Spatie\LaravelBlink;
 
-use Spatie\Blink\Blink;
 use Illuminate\Support\ServiceProvider;
+use Spatie\Blink\Blink;
 
 class BlinkServiceProvider extends ServiceProvider
 {

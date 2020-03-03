@@ -2,8 +2,8 @@
 
 namespace Spatie\LaravelBlink\Test;
 
-use Spatie\LaravelBlink\BlinkServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
+use Spatie\LaravelBlink\BlinkServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
