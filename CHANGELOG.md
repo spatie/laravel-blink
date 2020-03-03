@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-blink` will be documented in this file
 
+## 1.4.0 - 2020-02-03
+
+- Add Laravel 7 support
+
 ## 1.3.1 - 2019-10-20
 
 - fix facade namespace (#13)
