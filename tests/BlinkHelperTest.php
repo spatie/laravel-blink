@@ -2,8 +2,8 @@
 
 namespace Spatie\LaravelBlink\Test;
 
-use Spatie\Blink\Blink;
 use InvalidArgumentException;
+use Spatie\Blink\Blink;
 
 class BlinkHelperTest extends TestCase
 {
