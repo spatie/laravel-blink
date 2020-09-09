@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-blink.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-blink)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/spatie/laravel-blink/run-tests?label=tests)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-blink.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-blink)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-blink.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-blink)
 
 This package contains a helper function (and a Facade should you prefer that) called `blink` that can cache values. The cache only spans the length of a single request.
