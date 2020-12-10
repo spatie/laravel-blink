@@ -2,6 +2,11 @@
 
 All notable changes to `laravel-blink` will be documented in this file
 
+## 1.5.0 - 2020-12-10
+
+- Add PHP 8 support
+- Remove Laravel 5.8.* support
+
 ## 1.4.1 - 2020-09-09
 
 - Add Laravel 8 support
