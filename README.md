@@ -17,7 +17,6 @@ blink()->get('key'); // Returns 'value'
 blink()->get('prefix*'); // Returns an array of values whose keys start with 'prefix'
 
 // once will only execute the given callable if the given key didn't exist yet
-// once will only execute the given callable if the given key didn't exist yet
 $expensiveFunction = function() {
    return rand();
 });
