@@ -2,6 +2,20 @@
 
 All notable changes to `laravel-blink` will be documented in this file
 
+## 1.6.1 - 2023-01-24
+
+### What's Changed
+
+- Update README.md by @danjdewhurst in https://github.com/spatie/laravel-blink/pull/19
+- Add PHP 8.2 Support by @patinthehat in https://github.com/spatie/laravel-blink/pull/20
+- Laravel 10.x Compatibility by @laravel-shift in https://github.com/spatie/laravel-blink/pull/21
+
+### New Contributors
+
+- @danjdewhurst made their first contribution in https://github.com/spatie/laravel-blink/pull/19
+
+**Full Changelog**: https://github.com/spatie/laravel-blink/compare/1.6.0...1.6.1
+
 ## 1.6.0 - 2022-01-19
 
 - support Laravel 9
