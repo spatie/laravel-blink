@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-blink` will be documented in this file
 
+## 1.7.1 - 2025-02-19
+
+### What's Changed
+
+* Laravel 12.x Compatibility by @laravel-shift in https://github.com/spatie/laravel-blink/pull/23
+
+**Full Changelog**: https://github.com/spatie/laravel-blink/compare/1.7.0...1.7.1
+
 ## 1.7.0 - 2024-03-02
 
 ### What's Changed
