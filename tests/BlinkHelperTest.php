@@ -3,17 +3,18 @@
 namespace Spatie\LaravelBlink\Test;
 
 use InvalidArgumentException;
+use PHPUnit\Framework\Attributes\Test;
 use Spatie\Blink\Blink;
 
 class BlinkHelperTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_returns_an_instance_of_blink()
     {
         $this->assertInstanceOf(Blink::class, blink());
     }
 
-    /** @test */
+    #[Test]
     public function when_passing_a_single_argument_it_will_be_used_as_a_key()
     {
         blink()->put('key', 'myValue');
@@ -21,7 +22,7 @@ class BlinkHelperTest extends TestCase
         $this->assertEquals('myValue', blink('key'));
     }
 
-    /** @test */
+    #[Test]
     public function when_passing_two_arguments_they_will_be_used_to_put_something_in_the_blink_cache()
     {
         blink('key', function () {
@@ -31,7 +32,7 @@ class BlinkHelperTest extends TestCase
         $this->assertEquals('myValue', blink()->get('key'));
     }
 
-    /** @test */
+    #[Test]
     public function when_passing_two_arguments_the_result_of_the_callable_will_be_returned()
     {
         $result = blink('key', function () {
@@ -41,7 +42,7 @@ class BlinkHelperTest extends TestCase
         $this->assertEquals('myValue', $result);
     }
 
-    /** @test */
+    #[Test]
     public function it_will_throw_an_exception_if_too_many_arguments_are_given()
     {
         $this->expectException(InvalidArgumentException::class);
