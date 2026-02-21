@@ -3,8 +3,8 @@
 namespace Spatie\LaravelBlink\Test;
 
 use InvalidArgumentException;
-use Spatie\Blink\Blink;
 use PHPUnit\Framework\Attributes\Test;
+use Spatie\Blink\Blink;
 
 class BlinkHelperTest extends TestCase
 {
