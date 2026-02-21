@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-blink` will be documented in this file
 
+## 1.7.2 - 2026-02-21
+
+Support Laravel 13
+
 ## 1.7.1 - 2025-02-19
 
 ### What's Changed
