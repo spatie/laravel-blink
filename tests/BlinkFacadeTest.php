@@ -4,10 +4,11 @@ namespace Spatie\LaravelBlink\Test;
 
 use Blink;
 use Spatie\LaravelBlink\BlinkFacade;
+use PHPUnit\Framework\Attributes\Test;
 
 class BlinkFacadeTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_provides_a_facade()
     {
         Blink::put('test', 'myValue');
